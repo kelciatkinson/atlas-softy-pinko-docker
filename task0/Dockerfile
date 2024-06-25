@@ -1,8 +1,7 @@
-# Use the latest Ubuntu image as the base
-FROM ubuntu:latest
+FROM ubuntu:22.04
 
-# Update APT and upgrade the installed software
-RUN apt-get update && apt-get upgrade -y
+RUN apt-get -y update
 
-# Set the command to echo "Hello, World!" when the container runs
+RUN apt-get -y upgrade
+
 CMD ["echo", "Hello, World!"]
